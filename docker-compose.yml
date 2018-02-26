@@ -30,6 +30,8 @@ services:
     networks:
       - back
       - lb_web
+    ports:
+      - "8084:80"
   cron:
     image: piwik:fpm
     links:
