@@ -24,7 +24,7 @@ cd piwik
 MYSQL_ROOT_PASSWORD=mystrongpassword docker-compose up
 ```
 
-You can now access your instance on the port 80 of the IP of your machine (not recommended for production).
+You can now access your instance on the port 8084 of the IP of your machine.
 
 ## Access it from Internet
 
