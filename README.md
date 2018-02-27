@@ -20,11 +20,16 @@ Make sure you have [docker-compose](http://docs.docker.com/compose/install/) ins
 
 ```bash
 git clone https://github.com/eInfraCentral/eic-analytics.git
-cd piwik
-MYSQL_ROOT_PASSWORD=mystrongpassword docker-compose up
+cd eic-analytics
+MYSQL_ROOT_PASSWORD=Your password of choice  docker-compose up -d --build
 ```
 
 You can now access your instance on the port 8084 of the IP of your machine.
+
+Subsequent launches are done via (the password is ignored):
+```bash
+docker-compose up -d --build
+````
 
 ## Access it from Internet
 
@@ -43,7 +48,7 @@ At the `Database Setup` step, please enter the following:
 
   -  Database Server: `db`
   -  Login: `root`
-  -  Password: MYSQL_ROOT_PASSWORD
+  -  Password: Your password of choice (from above)
   -  Database Name: piwik (or you can choose)
  
 And leave the rest as default.
