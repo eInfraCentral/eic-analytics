@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  db:
+  mydb:
     image: mysql
     volumes:
       - ./mysql/runtime:/var/lib/mysql
@@ -13,7 +13,7 @@ services:
   app:
     image: piwik:fpm
     links:
-      - db
+      - mydb
     volumes:
       - ./config:/var/www/html/config
     networks:
@@ -38,7 +38,7 @@ services:
   cron:
     image: piwik:fpm
     links:
-      - db
+      - mydb
     volumes_from:
       - app
     entrypoint: |

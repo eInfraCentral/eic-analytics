@@ -46,7 +46,7 @@ You can also modify manually the nginx configuration file and map the TLS port o
 Once started, you'll arrive at the configuration wizard.
 At the `Database Setup` step, please enter the following:
 
-  -  Database Server: `db`
+  -  Database Server: `mydb`
   -  Login: `root`
   -  Password: Your password of choice (from above)
   -  Database Name: piwik (or you can choose)
